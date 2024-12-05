@@ -1,4 +1,5 @@
 // Importing our components
+import './App.css'
 import CompanyPage from "./components/CompanyPage";
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
@@ -45,11 +46,15 @@ const App = () => {
   // rendering below
   return (
     <>
+    <div className='wholeThang' style={{display: "flex", flexDirection:'column'} }>
       {/* <Header headerContent={headerContent} view={view}/> */}
       {/* changed header to update dynamically, earlier header content var no longer neccessary */}
       <Header view={view}/>
+      <div className="navCon" style={{display:'flex',flexDirection: 'row'}}>
       <Navbar views={views} changeView={changeView} />
       <Content view={view} />
+      </div>
+      </div>
     </>
   );
 };

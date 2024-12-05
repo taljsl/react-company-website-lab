@@ -1,0 +1,71 @@
+body{
+  background:url(/Users/joshua/code/ga/labs/react-company-website-lab/src/assets/Logo.png);
+  background-size: cover; /* Resize image to fit the container while maintaining aspect ratio */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-position: center; /* Center the image in the container */
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  overflow-y: hidden;
+  
+
+  /* background-position: fixed; */
+}
+.navCon{
+ display:flex; 
+}
+
+header{
+  margin: 5.5rem;
+  place-items: center;
+  font-size: 60px;
+  margin:0;
+}
+
+
+li{
+  list-style-type: none;
+  padding: none;
+  justify-content: space-around;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  color:red;
+  
+}
+li:hover{
+  color: blue;
+}
+nav{
+  width: 275px;
+  /* background-color: red; */
+  font-size: 20px;
+ 
+
+}
+.contentDiv{
+  width:100%;
+  place-items:center;
+  place-self: center;
+  font-size: 30px;
+  
+}
+a{
+  color:red;
+  margin: 20px
+}
+a:hover{
+  color: blue;
+}
+
+h2{color:red;
+  text-decoration: underline;
+}
+p{
+  color:red;
+}
+
+.welcome{
+  color:red;
+}
+h3{
+  color:red;
+}
