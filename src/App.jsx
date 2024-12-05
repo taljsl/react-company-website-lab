@@ -1,4 +1,4 @@
-// src/App.jsx
+// Importing our components
 import CompanyPage from "./components/CompanyPage";
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
@@ -7,27 +7,43 @@ import Content from "./components/Content";
 import PastWorkPage from "./components/PastWorkPage";
 import StaffPage from "./components/StaffPage";
 import LinksPage from "./components/LinksPage";
-// import Logo from "src/assets/Logo.png"
+import { useState } from "react";
+
+
+
+// App here
 const App = () => {
   const headerContent = {
-    // image: 'src/assets/screenshot_2024-12-05_at_10.13.51___am_480.png',
+    // image: 
     text: "Three Nerds Incorporated",
   };
   const views = [
-    { title: "Home", content: <Homepage />, id:1 },
-    { title: "Company History", content: <CompanyPage />, id:2 },
-    {title: 'Past Work', content: <PastWorkPage />, id:3},
-    {title: 'Staff', content:<StaffPage/>, id:4},
-    {title: 'Contact Us', content:<StaffPage />, id:5}, 
-    {title: 'Links', content:<LinksPage/>, id:6 }
+    { title: "Home", content: <Homepage />, id:0 },
+    { title: "Company History", content: <CompanyPage />, id:1 },
+    {title: 'Past Work', content: <PastWorkPage />, id:2},
+    {title: 'Staff', content:<StaffPage/>, id:3},
+    {title: 'Contact Us', content:<StaffPage />, id:4}, 
+    {title: 'Links', content:<LinksPage/>, id:5 }
   ];
 
-  
+
+  const [view, setView] = useState(views[0])
+
+  const changeView = (viewId) => {
+    // console.log(viewId)
+    const selectedView = views.filter(view => view.id === viewId)
+    console.log(selectedView)
+    setView(selectedView)
+
+  }
+
+  // rendering below
   return (
     <>
       <Header headerContent={headerContent} />
-      <Navbar views={views} />
-      <Content />
+      <Navbar views={views} changeView={changeView}/>
+      <Content view={view}/>
+
     </>
   );
 };

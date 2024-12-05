@@ -1,11 +1,13 @@
 import React from "react";
 
-const Navbar = ({ views }) => {
+const Navbar = ({ views, changeView }) => {
   return (
     <nav>
       <ul>
         {views.map((view) => (
-          <li>{view.title}</li>
+          <li key={view.id} onClick ={() => changeView(view.id)} >
+            {view.title}
+            </li>
         ))}
       </ul>
     </nav>

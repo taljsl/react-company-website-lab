@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Content = () => {
-  return (
+const Content = ({view}) => {
+  
+    return (
     <div>
-      
+        {view.title === 'Home' ? null : view.title }
+        {view.content}
     </div>
   )
 }
