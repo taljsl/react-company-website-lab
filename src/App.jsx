@@ -12,10 +12,10 @@ import ContactPage from "./components/ContactPage";
 
 // App here
 const App = () => {
-  const headerContent = {
-    // image:
-    text: "Three Nerds Incorporated",
-  };
+  // const headerContent = {
+  //   // image:
+  //   text: "Three Nerds Incorporated",
+  // };
   const views = [
     { title: "Home", content: <Homepage />, id: 0 },
     { title: "Company History", content: <CompanyPage />, id: 1 },
@@ -45,7 +45,9 @@ const App = () => {
   // rendering below
   return (
     <>
-      <Header headerContent={headerContent} view={view}/>
+      {/* <Header headerContent={headerContent} view={view}/> */}
+      {/* changed header to update dynamically, earlier header content var no longer neccessary */}
+      <Header view={view}/>
       <Navbar views={views} changeView={changeView} />
       <Content view={view} />
     </>

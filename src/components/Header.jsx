@@ -1,7 +1,7 @@
 // Banner at top of page
 import React from 'react'
 
-const Header = ({headerContent, view}) => {
+const Header = ({view}) => {
     
     
   
