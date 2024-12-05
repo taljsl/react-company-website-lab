@@ -5,7 +5,8 @@ const Navbar = ({ views, changeView }) => {
     <nav>
       <ul>
         {views.map((view) => (
-          <li key={view.id} onClick ={() => changeView(view.id)} >
+        //   <li key={view.id} onClick ={() => changeView(view.id)} >
+        <li key={view.id} onClick ={(event) => changeView(event)} id={view.id} >
             {view.title}
             </li>
         ))}

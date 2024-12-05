@@ -4,7 +4,7 @@ const Content = ({view}) => {
   
     return (
     <div>
-        {view.title === 'Home' ? null : view.title }
+        {/* {view.title === 'Home' ? null : view.title } */}
         {view.content}
     </div>
   )

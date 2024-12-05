@@ -1,15 +1,20 @@
 // Banner at top of page
 import React from 'react'
 
-const Header = ({headerContent}) => {
-  console.log(headerContent.image)
+const Header = ({headerContent, view}) => {
+    
+    
+  
     return (
-    <div>
-     <h1>{headerContent.text}</h1> 
-     {/* <img src={headerContent.image} alt="" /> */}
+    <header>
+     <h1>{view.title === 'Home' ? 'Three Nerds Incorporated' : view.title }</h1>
      
-    </div>
+     </header>
+     
+    
   )
 }
 
 export default Header
+
+
